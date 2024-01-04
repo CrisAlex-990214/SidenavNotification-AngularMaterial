@@ -1,0 +1,38 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close()">
+  <mat-sidenav #sidenav (keydown.escape)="close()" position="end" style="width: 256px;" disableClose>
+    <mat-icon (click)="close()" style="cursor: pointer;">close</mat-icon>
+    <mat-list>
+      <mat-list-item>
+        <span matListItemTitle>Title</span>
+        <span matListItemLine>Second line</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Title</span>
+        <span>Second line</span>
+      </mat-list-item>
+      <mat-list-item>
+        <span matListItemTitle>Title</span>
+        Second line
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p>
+      <mat-toolbar>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+          <mat-icon>menu</mat-icon>
+        </button>
+        <span>My App</span>
+        <span class="example-spacer"></span>
+        <button (click)="sidenav.open()" mat-icon-button class="example-icon favorite-icon"
+          aria-label="Example icon-button with heart icon">
+          <mat-icon>notifications</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>share</mat-icon>
+        </button>
+      </mat-toolbar>
+    </p>
+  </mat-sidenav-content>
+</mat-sidenav-container>
